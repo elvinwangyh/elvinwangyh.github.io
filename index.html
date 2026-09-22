@@ -10,73 +10,128 @@
 <meta property="og:title" content="Wang Yuhui (Elvin), FRM">
 <meta property="og:description" content="Macro and cross-asset researcher, Singapore.">
 <meta property="og:url" content="https://elvinwangyh.github.io/">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231E1F22'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='600' fill='%23FFFFFF' text-anchor='middle'%3EWY%3C/text%3E%3C/svg%3E">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f4f2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23161314'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23fdfdfc' text-anchor='middle'%3EWY%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 <style>
+  /* Theme: Macro Review Desk (macro-desk-d6s.pages.dev) */
   :root {
-    --bg: #FFFFFF;
-    --ink: #1E1F22;
-    --muted: #5A5E66;
-    --line: #B8BCC4;
+    --ground: #f5f4f2;
+    --surface: #fdfdfc;
+    --surface-2: #f1efec;
+    --ink: #161314;
+    --ink-2: #554f4d;
+    --muted: #8a8380;
+    --hair: #e3dfdb;
+    --axis: #c8c1bc;
+    --accent: #8b1c1c;
+    --accent-soft: #f4e7e5;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: light;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #17181B; --ink: #ECEDEF; --muted: #A4A8B0; --line: #5A5E66; }
-  }
-  :root[data-theme="dark"] { --bg: #17181B; --ink: #ECEDEF; --muted: #A4A8B0; --line: #5A5E66; }
   *, *::before, *::after { box-sizing: inherit; }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   body {
     margin: 0;
-    background: var(--bg);
+    background: var(--ground);
     color: var(--ink);
-    font-family: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.0625rem;
+    font-family: var(--sans);
+    font-size: 1rem;
     line-height: 1.65;
     -webkit-text-size-adjust: 100%;
   }
   main {
-    max-width: 40rem;
+    max-width: 42rem;
     margin: 0 auto;
-    padding: clamp(3rem, 10vw, 6.5rem) 1.5rem 4rem;
+    padding: clamp(3rem, 10vw, 6rem) 1.5rem 4rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.75rem;
   }
-  h1 { margin: 0; font-size: clamp(1.875rem, 5vw, 2.125rem); line-height: 1.2; font-weight: 600; }
-  h2 { margin: 0 0 0.625rem; font-size: 0.9375rem; font-weight: 600; color: var(--muted); }
+  h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5.5vw, 2.5rem);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  header p { margin-top: 0.5rem; }
+  h2 {
+    margin: 0 0 0.875rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ink);
+    font-family: var(--serif);
+    font-size: 1.3125rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
   p { margin: 0; }
-  .muted { color: var(--muted); }
+  section p, section li { color: var(--ink-2); }
+  .muted { color: var(--ink-2); }
   .stack { display: flex; flex-direction: column; gap: 0.875rem; }
   a {
     color: var(--ink);
     text-decoration: underline;
-    text-decoration-color: var(--line);
+    text-decoration-color: var(--axis);
     text-underline-offset: 3px;
   }
-  a:hover { text-decoration-color: var(--ink); }
-  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; }
-  .links { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
-  .links a { display: inline-block; padding: 0.625rem 0; }
-  ul { margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.25rem; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+  .links a {
+    display: inline-flex; align-items: center;
+    min-height: 2.75rem; padding: 0 0.875rem;
+    border: 1px solid var(--hair); border-radius: 6px;
+    background: var(--surface);
+    font-size: 0.9375rem; font-weight: 500; text-decoration: none;
+  }
+  .links a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+  ul { margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  li::marker { color: var(--axis); }
   .entry { display: flex; flex-direction: column; gap: 0.125rem; }
-  .entry + .entry { margin-top: 1rem; }
-  .entry ul { margin-top: 0.375rem; }
-  .role { font-weight: 600; }
-  .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
-  .entry-head .when { color: var(--muted); white-space: nowrap; }
-  .sub { color: var(--muted); font-style: italic; }
-  li strong { font-weight: 600; }
-  .skills { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.25rem 1.25rem; }
-  .skills dt { color: var(--muted); }
-  .skills dd { margin: 0; }
-  @media (max-width: 30rem) { .skills { grid-template-columns: 1fr; } .skills dd { margin-bottom: 0.5rem; } }
-  footer { font-size: 0.875rem; color: var(--muted); }
+  .entry + .entry { margin-top: 1.25rem; }
+  .entry ul { margin-top: 0.5rem; }
+  .role { font-weight: 600; color: var(--ink); }
+  .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; }
+  .entry-head .when { font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2); white-space: nowrap; }
+  .sub { color: var(--ink-2); font-style: italic; }
+  li strong { font-weight: 600; color: var(--ink); }
+  .skills { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.5rem 1.25rem; margin: 0; }
+  .skills dt {
+    font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-2); padding-top: 0.2rem;
+  }
+  .skills dd { margin: 0; color: var(--ink-2); }
+  @media (max-width: 30rem) { .skills { grid-template-columns: 1fr; gap: 0.125rem; } .skills dd { margin-bottom: 0.625rem; } }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 1.125rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    min-height: 2.75rem; padding: 0 1.25rem;
+    border: 1px solid var(--ink); border-radius: 8px;
+    background: var(--ink); color: var(--surface);
+    font-family: var(--sans); font-weight: 600; text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .btn svg { width: 1rem; height: 1rem; flex-shrink: 0; }
+  .cta .domain { font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2); }
+  footer {
+    padding-top: 1rem; border-top: 1px solid var(--hair);
+    font-family: var(--mono); font-size: 0.75rem; color: var(--ink-2);
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 </style>
 </head>
 <body>
@@ -91,15 +146,20 @@
     <p>I hold the FRM designation from GARP and a BBA (Honours) in Business Analytics and Finance from the National University of Singapore.</p>
     <nav class="links" aria-label="Contact and profiles">
       <a href="mailto:yuhui.wang.elvin@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/yuhui-wang-284072141/" rel="me noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/yuhui-wang-frm-284072141/" rel="me noopener">LinkedIn</a>
       <a href="https://github.com/elvinwangyh" rel="me noopener">GitHub</a>
+      <a href="https://macro-desk-d6s.pages.dev/" rel="noopener">Macro Review Desk</a>
       <a href="cv.pdf">CV (PDF)</a>
     </nav>
   </section>
 
   <section id="macro-review-desk" aria-labelledby="mrd">
     <h2 id="mrd">Macro Review Desk</h2>
-    <p>A public research site presenting the full research pipeline end to end: macro, cross-asset and thematic coverage, written for a non-specialist reader. Launching September 2026.</p>
+    <p>A public research site presenting the full research pipeline end to end: macro, cross-asset and thematic coverage, written for a non-specialist reader. Launched September 2026.</p>
+    <p class="cta">
+      <a class="btn" href="https://macro-desk-d6s.pages.dev/" rel="noopener">Visit Macro Review Desk<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <span class="domain">macro-desk-d6s.pages.dev</span>
+    </p>
   </section>
 
   <section aria-labelledby="exp">
