@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wang Yuhui (Elvin) | Macro and cross-asset researcher</title>
+<title>Wang Yuhui (Elvin), FRM | Macro and cross-asset researcher</title>
 <meta name="description" content="Wang Yuhui (Elvin), FRM. Macro and cross-asset researcher at a Singapore single-family office, building AI research pipelines for investment analysis.">
 <link rel="canonical" href="https://elvinwangyh.github.io/">
 <meta property="og:type" content="profile">
@@ -68,19 +68,27 @@
   .entry + .entry { margin-top: 1rem; }
   .entry ul { margin-top: 0.375rem; }
   .role { font-weight: 600; }
+  .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
+  .entry-head .when { color: var(--muted); white-space: nowrap; }
+  .sub { color: var(--muted); font-style: italic; }
+  li strong { font-weight: 600; }
+  .skills { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.25rem 1.25rem; }
+  .skills dt { color: var(--muted); }
+  .skills dd { margin: 0; }
+  @media (max-width: 30rem) { .skills { grid-template-columns: 1fr; } .skills dd { margin-bottom: 0.5rem; } }
   footer { font-size: 0.875rem; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Wang Yuhui (Elvin)</h1>
+    <h1>Wang Yuhui (Elvin), FRM</h1>
     <p class="muted">Macro and cross-asset researcher, Singapore</p>
   </header>
 
   <section class="stack" aria-label="About">
-    <p>I am a Business Analyst at a Singapore single-family office, where I write the firm’s monthly US macro review and cover an investment book focused on the AI compute value chain and digital assets.</p>
-    <p>I build the models and AI research pipelines behind the analysis, then turn the results into clear writing for the people making decisions. I hold the FRM designation and a BBA (Honours) from the National University of Singapore.</p>
+    <p>I am a macro and cross-asset researcher at a Singapore single-family office. I build the models and agentic AI pipelines behind the analysis, then translate the results into clear investment writing for the people making decisions.</p>
+    <p>I hold the FRM designation from GARP and a BBA (Honours) in Business Analytics and Finance from the National University of Singapore.</p>
     <nav class="links" aria-label="Contact and profiles">
       <a href="mailto:yuhui.wang.elvin@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/yuhui-wang-284072141/" rel="me noopener">LinkedIn</a>
@@ -91,45 +99,81 @@
 
   <section id="macro-review-desk" aria-labelledby="mrd">
     <h2 id="mrd">Macro Review Desk</h2>
-    <p>A public research site with monthly coverage of US macro, cross-asset markets and investment themes, written for a non-specialist reader. Launching September 2026.</p>
-  </section>
-
-  <section aria-labelledby="work">
-    <h2 id="work">Selected work</h2>
-    <ul>
-      <li>Agentic AI pipeline that produces the monthly macro review</li>
-      <li>GDP nowcasting and data-release event studies</li>
-      <li>Options-implied term structure and regime models</li>
-    </ul>
+    <p>A public research site presenting the full research pipeline end to end: macro, cross-asset and thematic coverage, written for a non-specialist reader. Launching September 2026.</p>
   </section>
 
   <section aria-labelledby="exp">
-    <h2 id="exp">Experience</h2>
+    <h2 id="exp">Professional experience</h2>
     <div class="entry">
-      <span class="role">Business Analyst</span>
-      <span class="muted">Single-family office, Singapore. Apr 2024 to present</span>
+      <div class="entry-head"><span class="role">Business Analyst</span><span class="when">Apr 2024 – Present</span></div>
+      <span class="sub">Single-family office, Singapore</span>
       <ul>
-        <li>Author the monthly macro review, covering US macro, cross-asset dynamics, themes and trade recommendations</li>
-        <li>Return attribution and factor analysis for the portfolio manager, informing hedging decisions</li>
-        <li>Equity and options execution</li>
+        <li><strong>Monthly macro review:</strong> author of the firm’s end-to-end monthly review covering US macroeconomic conditions, cross-asset dynamics, thematic analysis and trade recommendations, produced through an agentic AI research pipeline I designed and built.</li>
+        <li><strong>Thematic research coverage:</strong> research support for an investment book concentrated in the AI compute value chain (US semiconductors and China data-centre infrastructure) and digital assets.</li>
+        <li><strong>Return attribution and factor analysis:</strong> decompose portfolio returns and factor exposures to identify emerging risks through macro and asset-specific transmission channels; findings presented to the portfolio manager to inform hedging decisions.</li>
+        <li><strong>Hedging analysis:</strong> proposed a DV01-neutral long-breakeven hedge against inflation risk from the oil-supply shock; built a cross-asset correlation-regime analysis to characterise the macro environment and assess hedge granularity.</li>
+        <li><strong>Trade execution:</strong> equity and options trades, including the firm’s portfolio-wide options hedge, using limit and algorithmic orders to manage cost and liquidity.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="res">
+    <h2 id="res">Independent research and AI systems</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="role">Personal research platform</span><span class="when">Dec 2020 – Present</span></div>
+      <span class="sub">Self-funded: own data, compute and tooling</span>
+      <ul>
+        <li><strong>Agentic research pipeline:</strong> designed and built the monthly review pipeline (LLM skill files, persistent research state, automated HTML publication) and an AI-assisted strategy documentation workflow separating code extraction from narrative synthesis.</li>
+        <li><strong>Quantitative models:</strong> GDP nowcasting benchmarked against GDPNow and data-release event studies; options-implied term-structure factor model, DCC-HMM regime detection and a real-time implied S&amp;P 500 equity risk premium engine.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="early">
+    <h2 id="early">Internship and university achievements</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="role">Digitalisation Analyst, Intern</span><span class="when">Jan 2023 – Jun 2023</span></div>
+      <span class="sub">Deutsche Post DHL Group, Express Regional Business IT</span>
+      <ul>
+        <li>Built API and Alteryx data pipelines feeding Power BI dashboards for regulatory compliance and operational efficiency.</li>
+        <li>Translated operational requirements into a prototype offline shipment-processing application, working with external technology partners including Google.</li>
       </ul>
     </div>
     <div class="entry">
-      <span class="role">Digitalisation Analyst (Intern)</span>
-      <span class="muted">Deutsche Post DHL Group. Jan to Jun 2023</span>
+      <div class="entry-head"><span class="role">University competitions and projects</span><span class="when">2020 – 2023</span></div>
+      <span class="sub">National University of Singapore</span>
+      <ul>
+        <li><strong>CME Group University Trading Challenge (2020, 2021):</strong> formed and led the team; mean-reversion and momentum strategies returned 40%, ranked first among Singapore teams.</li>
+        <li><strong>Capstone:</strong> led a medium-term crypto trading strategy using GARCH models and variance-ratio tests (Grade A+).</li>
+      </ul>
     </div>
   </section>
 
   <section aria-labelledby="edu">
-    <h2 id="edu">Education</h2>
+    <h2 id="edu">Education and certifications</h2>
     <div class="entry">
-      <span class="role">Financial Risk Manager (FRM)</span>
-      <span class="muted">GARP. Jun 2026</span>
+      <div class="entry-head"><span class="role">Financial Risk Manager (FRM), GARP</span><span class="when">Jun 2026</span></div>
+      <span class="sub">GARP member, FRM charterholder. GARP ID: 1409823</span>
     </div>
     <div class="entry">
-      <span class="role">BBA (Honours), Business Analytics and Finance</span>
-      <span class="muted">National University of Singapore. 2019 to 2023</span>
+      <div class="entry-head"><span class="role">National University of Singapore</span><span class="when">Aug 2019 – Dec 2023</span></div>
+      <span class="sub">Bachelor of Business Administration (Honours), Business Analytics and Finance</span>
     </div>
+    <div class="entry">
+      <div class="entry-head"><span class="role">Anglo-Chinese Junior College</span><span class="when">2017 – 2018</span></div>
+      <span class="sub">GCE A-Level: Distinctions in General Paper and Project Work</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Python, R, SQL</dd>
+      <dt>AI / ML</dt><dd>PyTorch, TensorFlow, scikit-learn, PyCaret; LLM agent workflows, prompt and skill architecture</dd>
+      <dt>Quant / Data</dt><dd>pandas, NumPy, SciPy, statsmodels, Dask, Arrow/Parquet, Plotly, Streamlit, CUDA RAPIDS</dd>
+      <dt>Cloud / BI</dt><dd>AWS, GCP, Azure; Power BI, Alteryx, Excel/Google Sheets</dd>
+      <dt>Spoken</dt><dd>English, Mandarin (native); basic French and Japanese</dd>
+    </dl>
   </section>
 
   <footer>Last updated September 2026</footer>
